@@ -1,6 +1,7 @@
 ﻿import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useNavigate, useParams } from 'react-router-dom';
+import { useCandidateCount } from '../Components/CandidateCountContext';
 
 const ViewDetails = () => {
 
@@ -8,6 +9,7 @@ const ViewDetails = () => {
 
     const [candidate, setCandidate] = useState();
     const [inProgress, setInProgress] = useState(false);
+    const { refreshCandidateCounts } = useCandidateCount();
 
     const navigate = useNavigate();
 
@@ -32,6 +34,7 @@ const ViewDetails = () => {
         await axios.post('/api/candidatetracker/updatecandidate', updatedCandidate);
 
         setInProgress(false);
+        refreshCandidateCounts();
         navigate('/');
     }
 
@@ -44,6 +47,7 @@ const ViewDetails = () => {
         await axios.post('/api/candidatetracker/updatecandidate', updatedCandidate);
 
         setInProgress(false);
+        refreshCandidateCounts();
         navigate('/');
     }
 

@@ -6,6 +6,7 @@ import axios from 'axios';
 const Pending = () => {
 
     const [candidates, setCandidates] = useState([]);
+    const [toggle, setToggle] = useState(true);
 
     useEffect(() => {
         const getCandidates = async () => {
@@ -17,8 +18,14 @@ const Pending = () => {
         getCandidates();
     }, []);
 
+    const onToggleClick = () => {
+        setToggle(!toggle);
+    }
+
     return (
-        <div className="container" style={{marginTop: '80px'} }>
+        <div className="container" style={{ marginTop: '80px' }}>
+            <h1>Pending Candidates</h1>
+            <button className="btn btn-success" style={{ marginBottom: "10px", marginTop: '30px' }} onClick={onToggleClick}>Toggle Notes</button>
             <table className="table table-hover table-striped table-bordered">
                 <thead>
                     <tr>
@@ -27,6 +34,7 @@ const Pending = () => {
                         <th>Last Name</th>
                         <th>Phone</th>
                         <th>Email</th>
+                        {toggle ? <th>Notes</th> : ''}
                     </tr>
                 </thead>
                 <tbody>
@@ -41,7 +49,7 @@ const Pending = () => {
                             <td>{c.lastName}</td>
                             <td>{c.phoneNumber}</td>
                             <td>{c.email}</td>
-                            <td>{c.notes}</td>
+                            {toggle ? < td > {c.notes}</td> : ''}
                         </tr>
                     ))}
                 </tbody>

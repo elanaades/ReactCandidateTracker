@@ -5,9 +5,9 @@ const CandidateCountContext = createContext();
 
 const CandidateCountContextComponent = ({ children }) => {
 
-    const [pendingCount, setPendingCount] = useState([]);
-    const [confirmedCount, setConfirmedCount] = useState([]);
-    const [refusedCount, setRefusedCount] = useState([]);
+    const [pendingCount, setPendingCount] = useState(0);
+    const [confirmedCount, setConfirmedCount] = useState(0);
+    const [refusedCount, setRefusedCount] = useState(0);
 
     const refreshCandidateCounts = async () => {
         const { data } = await axios.get('/api/candidatetracker/getcandidates');

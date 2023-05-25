@@ -1,5 +1,5 @@
 ﻿import 'bootstrap/dist/css/bootstrap.min.css';
-import React, { useState, useEffect } from 'react';
+import React, { useState} from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { useCandidateCount } from '../Components/CandidateCountContext';
@@ -14,7 +14,7 @@ const AddCandidate = () => {
     const [isSubmitting, setIsSubmitting] = useState(false);
 
     const navigate = useNavigate();
-    const { refreshCandidateCounts } = useCandidateCount();
+    const { refreshCandidateCounts} = useCandidateCount();
 
     const onSubmitClick = async () => {
         setIsSubmitting(true);
@@ -28,7 +28,6 @@ const AddCandidate = () => {
         });
         setIsSubmitting(false);
         await refreshCandidateCounts();
-
         navigate('/pending');
     }
 

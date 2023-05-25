@@ -1,10 +1,12 @@
-﻿import React from 'react';
+﻿import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useCandidateCount } from './CandidateCountContext';
 
 const Layout = (props) => {
 
-    const { pendingCount, confirmedCount, refusedCount } = useCandidateCount();
+    const { pendingCount, confirmedCount, refusedCount} = useCandidateCount();
+
+
 
     return (
         <>
