@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33403.182
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReactCandidateTracker.Web", "ReactCandidateTracker.Web\ReactCandidateTracker.Web.csproj", "{35E99783-DC0A-461F-9A02-B6236DD2BC2D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReactCandidateTracker.Data", "ReactCandidateTracker.Data\ReactCandidateTracker.Data.csproj", "{B56D4784-5657-45C4-9B56-0D79F90E9DC4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{35E99783-DC0A-461F-9A02-B6236DD2BC2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35E99783-DC0A-461F-9A02-B6236DD2BC2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35E99783-DC0A-461F-9A02-B6236DD2BC2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35E99783-DC0A-461F-9A02-B6236DD2BC2D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B56D4784-5657-45C4-9B56-0D79F90E9DC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B56D4784-5657-45C4-9B56-0D79F90E9DC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B56D4784-5657-45C4-9B56-0D79F90E9DC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B56D4784-5657-45C4-9B56-0D79F90E9DC4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A82D8232-D723-4839-AE6F-59BCCD167AC6}
+	EndGlobalSection
+EndGlobal
